@@ -8,7 +8,6 @@
 }
 
 header {
-    min-width: 390px;
     height: 450px;
     display: flex;
     justify-content: space-evenly;
@@ -24,6 +23,8 @@ header {
 
 header > p {
     padding: 0px 50px;
+    max-width: 900px;
+    line-height: 1.5em;
 }
 
 a {
@@ -43,24 +44,24 @@ a:hover {
 section#web {
     text-align: center;
     padding: 25px;
-    height: 230px;
     background-color: rgba(128, 128, 128, 0.214);
 }
 
 div.web {
-    width: 900px;
     margin: auto;
     display: flex;
+    justify-content: center;
     flex-direction: row;
     padding-top: 25px;
 }
 
 div.web > p {
     padding: 10px;
+    max-width: 500px;
+    line-height: 1.5em;
 }
 
 section#blocos {
-    height: 550px;
     background-color: rgba(0, 0, 0, 0.79);
 }
 
@@ -80,7 +81,6 @@ div.bloco {
     display: flex;
     flex-direction: column;
     width: 270px;
-    height: 470px;
     background-color: white;
     text-align: center;
 }
@@ -90,13 +90,12 @@ h3 {
 }
 
 div.bloco > p {
-    padding: 0px 10px;
+    padding: 0px 10px 15px 10px;
     line-height: 1.7em;
 }
 
 article#art {
     padding: 25px;
-    height: 230px;
     background-color: rgba(128, 128, 128, 0.078);
     display: flex;
     justify-content: space-evenly;
@@ -105,15 +104,14 @@ article#art {
 }
 
 article#art > p {
+    max-width: 800px;
     display: flex;
     align-self: center;
-    width: 700px;
     line-height: 1.5em;
+    padding: 30px;
 }
 
 article#opt {
-    min-width: 390px;
-    height: 320px;
     display: flex;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.79);
@@ -126,6 +124,7 @@ div.opt1, div.opt2 {
     align-items: center;
     flex-direction: column;
     text-align: center;
+    padding: 30px;
 }
 
 div.opt1 {
@@ -133,7 +132,7 @@ div.opt1 {
 }
 
 p.mid {
-    padding: 50px 0px;
+    padding: 50px 15px;
 }
 
 footer {
@@ -145,3 +144,22 @@ footer {
     color: white;
     font-weight: bold;
 }
+
+
+
+@media (max-width: 600px) {
+    div.web {
+        display: block;
+    }
+}
+
+@media (max-width: 900px) {
+    ul {
+        flex-direction: column;
+    }
+
+    article#opt {
+        flex-direction: column;
+    }
+}
+    
